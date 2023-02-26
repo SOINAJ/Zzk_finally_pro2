@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.zzk_finaly_pro_1.dao.FoodmesDao">
+
+    <update id="delete_good_stack">
+        update foodmes_zzk
+        <if test='param1 == "add" '>
+            set stack = stack+1 where
+        </if>
+        <if test='param1 == "del" '>
+            set stack = stack-1 where
+        </if>
+        id in (${param2})
+    </update>
+
+
+</mapper>

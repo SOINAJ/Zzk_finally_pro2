@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>壹信餐饮</title>
+        <meta name="keywords" content="大气,黑色,常用,后台管理,网站模板" /> 
+        <meta name="description" content="大气黑色常用后台管理网站模板下载，框架已搭好，自定义填充模板类型。" /> 
+		<link rel="stylesheet" type="text/css" href="/css/identify.css" />
+		<link rel="stylesheet" type="text/css" href="/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="/css/account.css" />
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/css/control_index.css" />
+		<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/js/layer/layer.js"></script>
+		<script type="text/javascript" src="/js/haidao.offcial.general.js"></script>
+		<script type="text/javascript" src="/js/select.js"></script>
+		<script type="text/javascript" src="/js/haidao.validate.js"></script>
+
+		<link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+		<style type="text/css">
+			.Content-Main{
+				max-width: 500px;
+				margin: auto;
+				margin-top: 50px;
+				padding: 20px 30px 20px 30px;
+				font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+				text-shadow: 1px 1px 1px #FFF;
+				border: 1px solid #DDD;
+				border-radius: 5px;
+				color: #888;
+				background: #FFF;
+			}
+			.Content-Main h1{
+				display: block;
+				padding: 0px 0px 10px 40px;
+				margin: -10px -30px 30px -30px;
+				font: 25px "Helvetica Neue", Helvetica, Arial, sans-serif;
+				border-bottom: 1px solid #DADADA;
+				color: #888;
+			}
+			.Content-Main h1>span{
+				display: block;
+				font-size: 11px;
+			}
+			.Content-Main label{
+				display: block;
+				margin: 0px 0px 5px;
+			}
+			.Content-Main label>span{
+				float: left;
+				width: 20%;
+				padding-right: 10px;
+				margin-top: 10px;
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-weight: bold;
+				text-align: right;
+				color: #333;
+			}
+			.Content-Main input[type="text"],.Content-Main textarea{
+				width: 70%;
+				height: 20px;
+				padding: 5px 0px 5px 5px;
+				margin-bottom: 16px;
+				margin-right: 6px;
+				margin-top: 2px;
+				line-height: 15px;
+				border-radius: 4px;
+				border: 1px solid #CCC;
+				color: #888;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			}
+			.select1{
+				width: 71%;
+				height: 35px;
+				margin-bottom: 16px;
+				margin-right: 6px;
+				margin-top: 2px;
+				line-height: 15px;
+				padding: 5px 0px 5px 5px;
+				border-radius: 4px;
+				border: 1px solid #CCC;
+				color: #888;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			}
+			.select2{
+				width: 25%;
+				height: auto;
+				padding-top: 1px;
+				padding-bottom: 3px;
+				padding-left: 1px;
+				margin-top: 5px;
+				margin-bottom: 10px;
+				border-radius: 4px;
+				border: 1px solid #CCC;
+				color: #888;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			}
+			.Content-Main textarea{
+				width: 70%;
+				height: 100px;
+				padding: 5px 0px 0px 5px;
+			}
+			#url{
+				width: 70%;
+				height: auto;
+				padding: 5px 0px 25px 5px;
+			}
+			#describe{
+				width: 70%;
+				height: auto;
+				padding: 5px 0px 80px 5px;
+			}
+			#email{
+				width: 70%;
+				height: auto;
+				padding: 5px 0px 5px 5px;
+			}
+			#verifiation code{
+				width: 20px;
+				height: auto;
+			}
+			.button{
+				padding: 10px 25px 10px 25px;
+				margin-left: 111px;
+				border-radius: 4px;
+				border:1px solid #CCC;
+				background: #FFF;
+				color: #333;
+			}
+			.button:hover{
+				color: #333;
+				background-color: #EBEBEB;
+				border-color: #ADADAD;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="view-topbar">
+			<div class="topbar-console">
+				<div class="tobar-head fl">
+					<a href="#" class="topbar-logo fl">
+					<span><img src="/Images/logo.png" width="20" height="20"/></span>
+					</a>
+					<a href="index.html" class="topbar-home-link topbar-btn text-center fl"><span>壹信餐饮</span></a>
+				</div>
+			</div>
+			<div class="topbar-info">
+				<ul class="fr">
+					<li class="fl topbar-info-item">
+					<div class="dropdown">
+						<a href="#" class="topbar-btn">
+							<span class="fl text-normal" id="myname">小朱</span><span class="fl text-normal">号桌</span>
+						<span class="icon-arrow-down"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a onclick="Aclick()">退出</a></li>
+						</ul>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="view-body">
+			<div class="view-sidebar">
+				<div class="sidebar-content">
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="#">
+								<span class="icon"><b class="fl icon-arrow-down"></b></span>
+								<span class="text-normal">菜品管理</span>
+							</a>
+						</div>
+						<ul class="sidebar-trans">
+							<li>
+								<a href="../file/foods_market.html">
+									<b class="sidebar-icon"><img src="/Images/icon_author.png" width="16" height="16" /></b>
+									<span class="text-normal">点餐操作</span>
+								</a>
+							</li>
+							<li>
+								<a href="../file/food_state1.html">
+									<b class="sidebar-icon"><img src="/Images/icon_message.png" width="16" height="16" /></b>
+									<span class="text-normal">查看订单</span>
+								</a>
+							</li>
+							<li>
+								<a href="../file/food_state2.html">
+									<b class="sidebar-icon"><img src="/Images/icon_message.png" width="16" height="16" /></b>
+									<span class="text-normal">查看完成订单</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="#">
+								<span class="icon"><b class="fl icon-been-set"></b></span>
+								<span class="text-normal">服务(菜品)评价</span>
+							</a>
+						</div>
+					</div>
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a onclick="endfun()">
+								<span class="icon"><b class="fl icon-been-set"></b></span>
+								<span class="text-normal">结账服务</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="view-product background-color">
+				<div class="padding-big background-color">
+					<div class="account-info clearfix">
+
+						<div class="Content-Main">
+							<div class="Content-Main1">
+								<h1>服务(菜品)评价</h1>
+							</div>
+							<form action="" method="" class="form-report">
+
+								<label>
+									<span>评价桌号:</span>
+									<input type="text" name="user" id="user" style="width: 200px;" readonly value="1">
+								</label>
+
+								<label>
+									<span style="margin-left: -30px;width: 118px;">被评价人员(菜品):</span>
+									<input type="text" name="work" id="work" style="width: 200px;">
+								</label>
+
+								<label>
+									<span>评价情况:</span>
+									<select name="select2" class="select2">
+										<option value="1">服务态度太差</option>
+										<option value="2">服务效果太低</option>
+										<option value="3">菜品质量不行</option>
+										<option value="4">其他</option>
+									</select>
+								</label>
+
+
+								<label class="otherlabel" style="display: none;">
+									<span>评价内容简介:</span>
+									<textarea id="describe" name="describe" placeholder="详细填写评价内容" style="resize:none;"></textarea>
+								</label>
+
+
+							</form>
+							<label>
+								<!--      <input type="submit" class="button" value="提交">-->
+								<input type="button" class="button" value="提交" onclick="form_post()">
+							</label>
+						</div>
+
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<script>
+			$(".sidebar-title").live('click', function() {
+				if ($(this).parent(".sidebar-nav").hasClass("sidebar-nav-fold")) {
+					$(this).next().slideDown(200);
+					$(this).parent(".sidebar-nav").removeClass("sidebar-nav-fold");
+				} else {
+					$(this).next().slideUp(200);
+					$(this).parent(".sidebar-nav").addClass("sidebar-nav-fold");
+				}
+			});
+		</script>
+	</body>
+
+</html>
+<script src="/js/jquery-1.7.2.min.js"></script>
+<script src="/myjs/isEmpty.js"></script>
+<script src="/myjs/work/work_name.js"></script>
+<script src="/js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="/myjs/user/user_complain.js"></script>
+<script src="/myjs/user/end.js"></script>

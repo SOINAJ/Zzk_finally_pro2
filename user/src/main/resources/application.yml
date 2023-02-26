@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: ZZK_finaly_pro_2
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zzk_pro?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=CST&serverTimezone=Asia/Shanghai
+    username: root
+    password: "123"
+
+
+  jackson:
+    time-zone: GMT+8
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 3000
+    database: 0
+  servlet:
+    multipart:
+      max-file-size: 100MB
+  web:
+    resources:
+      static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/templates/
+
+
+server:
+  port: 8081
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.example.zzk_finaly_pro_2.POJO
+#  configuration:
+#    map-underscore-to-camel-case: true

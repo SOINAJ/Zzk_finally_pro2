@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>壹信餐饮</title>
+		<link rel="stylesheet" type="text/css" href="/css/identify.css" />
+		<link rel="stylesheet" type="text/css" href="/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="/css/account.css" />
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/css/control_index.css" />
+		<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/js/layer/layer.js"></script>
+		<script type="text/javascript" src="/js/haidao.offcial.general.js"></script>
+		<script type="text/javascript" src="/js/select.js"></script>
+		<script type="text/javascript" src="/js/haidao.validate.js"></script>
+		<link href="/css/bootstrap.min.css" rel="stylesheet">
+		<!--    <link th:href="@{/static/bootstrap/bootstrap/css/bootstrap.min.css}">-->
+		<link href="/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+		<link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+	</head>
+
+	<body>
+<div class="view-topbar">
+	<div class="topbar-console">
+		<div class="tobar-head fl">
+			<a href="#" class="topbar-logo fl">
+				<span><img src="/Images/logo.png" width="20" height="20"/></span>
+			</a>
+			<a href="index.html" class="topbar-home-link topbar-btn text-center fl"><span>壹信餐饮</span></a>
+		</div>
+	</div>
+	<div class="topbar-info">
+		<ul class="fr">
+			<li class="fl topbar-info-item">
+				<div class="dropdown" id="mydrop" onclick="c()">
+					<a href="#" class="topbar-btn">
+						<span class="fl text-normal" id="myname">小朱</span><span class="fl text-normal">号桌</span>
+						<span class="icon-arrow-down"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li><a href="../login.html">退出</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+		<div class="view-body">
+			<div class="view-sidebar">
+				<div class="sidebar-content">
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="#">
+								<span class="icon"><b class="fl icon-arrow-down"></b></span>
+								<span class="text-normal">菜品管理</span>
+							</a>
+						</div>
+						<ul class="sidebar-trans">
+							<li>
+								<a href="../file/foods_market.html">
+									<b class="sidebar-icon"><img src="/Images/icon_author.png" width="16" height="16" /></b>
+									<span class="text-normal">点餐操作</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<b class="sidebar-icon"><img src="/Images/icon_message.png" width="16" height="16" /></b>
+									<span class="text-normal">查看订单</span>
+								</a>
+							</li>
+							<li>
+								<a href="../file/food_state2.html">
+									<b class="sidebar-icon"><img src="/Images/icon_message.png" width="16" height="16" /></b>
+									<span class="text-normal">查看完成订单</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="../file/complain_user.html">
+								<span class="icon"><b class="fl icon-been-set"></b></span>
+								<span class="text-normal">服务(菜品)评价</span>
+							</a>
+						</div>
+					</div>
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a onclick="endfun()">
+								<span class="icon"><b class="fl icon-been-set"></b></span>
+								<span class="text-normal">结账服务</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="view-product background-color">
+				<div class="padding-big background-color">
+					<div class="account-info clearfix">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title">
+								<h3 >菜品订单表  -->>  正在做的菜品</h3>
+							</div>
+
+<!--							<div id="toolbar">-->
+<!--								<button id="button" class="btn btn-default">订单取消</button>-->
+<!--							</div>-->
+
+							<table id="table"
+								   data-height="350"
+								   class="table table-striped"
+								   data-toggle="table"
+								   data-show-columns="true"
+								   data-buttons-class="primary"
+								   data-events="operateEvents"
+								   data-toolbar="#toolbar"
+								   data-pagination="true"
+							>
+							</table>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</body>
+
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
+<script src="/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
+<!--<script src="/myjs/work/goods_get.js"></script>-->
+<script src="/myjs/isEmpty.js"></script>
+<script src="/myjs/work/work_name.js"></script>
+<script src="/js/plugins/layer/layer.min.js"></script>
+<script src="/js/plugins/layer/layer.min.js"></script>
+<script src="/js/demo/layer-demo.min.js"></script>
+<script src="/myjs/user/end.js"></script>
+<script>
+	var number_zhuo = getCookie("mysyszhuo")
+
+	$("#table").bootstrapTable({
+		url: "../goods/1/"+number_zhuo,
+		method: "GET",
+		cache: "false",
+		columns: [
+			{title: "订单编号", field: "id"},
+			{title: "菜品编号", field: "number_cai"},
+			{title: "菜品名字", field: "food"},
+			{title: "桌子编号", field: "number_zhuo"},
+			{title: "做法", field: "way"}
+
+		],
+
+		sidePagination: "client",
+
+	})
+
+	$(".sidebar-title").live('click', function() {
+		if ($(this).parent(".sidebar-nav").hasClass("sidebar-nav-fold")) {
+			$(this).next().slideDown(200);
+			$(this).parent(".sidebar-nav").removeClass("sidebar-nav-fold");
+		} else {
+			$(this).next().slideUp(200);
+			$(this).parent(".sidebar-nav").addClass("sidebar-nav-fold");
+		}
+	});
+
+	function c() {
+		var oh = $("#mydrop").attr("class")
+		if (oh == "dropdown"){
+			$(".dropdown").attr("class","dropdown open")
+		}else {
+			$(".dropdown").attr("class","dropdown")
+		}
+	}
+</script>

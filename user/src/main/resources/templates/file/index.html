@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>壹信餐饮</title>
+        <meta name="keywords" content="大气,黑色,常用,后台管理,网站模板" /> 
+        <meta name="description" content="大气黑色常用后台管理网站模板下载，框架已搭好，自定义填充模板类型。" /> 
+		<link rel="stylesheet" type="text/css" href="/css/identify.css" />
+		<link rel="stylesheet" type="text/css" href="/css/layout.css" />
+		<link rel="stylesheet" type="text/css" href="/css/account.css" />
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/css/control_index.css" />
+		<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="/js/layer/layer.js"></script>
+		<script type="text/javascript" src="/js/haidao.offcial.general.js"></script>
+		<script type="text/javascript" src="/js/select.js"></script>
+		<script type="text/javascript" src="/js/haidao.validate.js"></script>
+		<link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="view-topbar">
+			<div class="topbar-console">
+				<div class="tobar-head fl">
+					<a href="#" class="topbar-logo fl">
+					<span><img src="/Images/logo.png" width="20" height="20"/></span>
+					</a>
+					<a href="../file/index.html" class="topbar-home-link topbar-btn text-center fl"><span>壹信餐饮</span></a>
+				</div>
+			</div>
+			<div class="topbar-info">
+				<ul class="fr">
+<!--					<li class="fl dropdown topbar-notice topbar-btn">-->
+<!--					<a href="#" class="dropdown-toggle">-->
+<!--					<span class="icon-notice"></span>-->
+<!--					<span class="topbar-num have">0</span>-->
+<!--					&lt;!&ndash;have表示有消息，没有消息去掉have&ndash;&gt;-->
+<!--					</a>-->
+<!--					</li>-->
+					<li class="fl topbar-info-item">
+					<div class="dropdown" id="mydrop" onclick="c()">
+						<a href="#" class="topbar-btn">
+							<span class="fl text-normal" id="myname">小朱</span><span class="fl text-normal">号桌</span>
+						<span class="icon-arrow-down"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a onclick="Aclick()">退出</a></li>
+						</ul>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="view-body">
+			<div class="view-sidebar">
+				<div class="sidebar-content">
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="#">
+								<span class="icon"><b class="fl icon-arrow-down"></b></span>
+								<span class="text-normal">菜品管理</span>
+							</a>
+						</div>
+						<ul class="sidebar-trans">
+							<li>
+								<a href="../file/foods_market.html">
+									<b class="sidebar-icon"><img src="/Images/icon_author.png" width="16" height="16" /></b>
+									<span class="text-normal">点餐操作</span>
+								</a>
+							</li>
+							<li>
+								<a href="../file/food_state1.html">
+									<b class="sidebar-icon"><img src="/Images/icon_message.png" width="16" height="16" /></b>
+									<span class="text-normal">查看订单</span>
+								</a>
+							</li>
+							<li>
+								<a href="../file/food_state2.html">
+									<b class="sidebar-icon"><img src="/Images/icon_message.png" width="16" height="16" /></b>
+									<span class="text-normal">查看完成订单</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="../file/complain_user.html">
+								<span class="icon"><b class="fl icon-been-set"></b></span>
+								<span class="text-normal">服务(菜品)评价</span>
+							</a>
+						</div>
+					</div>
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a onclick="endfun()">
+								<span class="icon"><b class="fl icon-been-set"></b></span>
+								<span class="text-normal">结账服务</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="view-product background-color">
+				<div class="padding-big background-color">
+					<div class="account-info clearfix">
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<script>
+			$(".sidebar-title").live('click', function() {
+				if ($(this).parent(".sidebar-nav").hasClass("sidebar-nav-fold")) {
+					$(this).next().slideDown(200);
+					$(this).parent(".sidebar-nav").removeClass("sidebar-nav-fold");
+				} else {
+					$(this).next().slideUp(200);
+					$(this).parent(".sidebar-nav").addClass("sidebar-nav-fold");
+				}
+			});
+
+			function c() {
+				var oh = $("#mydrop").attr("class")
+				if (oh == "dropdown"){
+					$(".dropdown").attr("class","dropdown open")
+				}else {
+					$(".dropdown").attr("class","dropdown")
+				}
+			}
+		</script>
+	</body>
+
+</html>
+<script src="/js/jquery.min.js"></script>
+<script src="/myjs/isEmpty.js"></script>
+<script src="/myjs/work/work_name.js"></script>
+<script src="/js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="/js/plugins/layer/layer.min.js"></script>
+<script src="/js/plugins/layer/layer.min.js"></script>
+<script src="/js/demo/layer-demo.min.js"></script>
+<script src="/myjs/user/end.js"></script>

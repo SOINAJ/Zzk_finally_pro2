@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>壹信餐饮</title>
+        <meta name="keywords" content="大气,黑色,常用,后台管理,网站模板" /> 
+        <meta name="description" content="大气黑色常用后台管理网站模板下载，框架已搭好，自定义填充模板类型。" /> 
+		<link rel="stylesheet" type="text/css" href="/css/identify.css" />
+		<link rel="stylesheet" type="text/css" href="/css/layout.css" />
+<!--		<link rel="stylesheet" type="text/css" href="/css/account.css" />-->
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="/css/control_index.css" />
+		<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+<!--		<script type="text/javascript" src="/js/layer/layer.js"></script>-->
+		<script type="text/javascript" src="/js/haidao.offcial.general.js"></script>
+		<script type="text/javascript" src="/js/select.js"></script>
+		<script type="text/javascript" src="/js/haidao.validate.js"></script>
+		<link href="/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+		<script src="/js/jquery.min.js?v=2.1.4"></script>
+		<script src="/js/bootstrap.min.js?v=3.3.6"></script>
+		<link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+		<style>
+			.panel{
+				width: 30%;
+				height: 350px;
+				float: left;
+				margin-left: 30px;
+			}
+			/*body,html{*/
+			/*	width: 50%;*/
+			/*	height: 50%;*/
+			/*}*/
+			#mymarket{
+				/*height: 100%;*/
+				overflow: hidden;
+			}
+			/*#mymarket {*/
+			/*	!*position:fixed;*!*/
+			/*	!*bottom:80px;*!*/
+			/*	!*right:0;*!*/
+			/*	!*display:none;*!*/
+			/*	overflow-y: scroll;*/
+			/*}*/
+		</style>
+	</head>
+
+	<body>
+		<div class="view-topbar">
+			<div class="topbar-console">
+				<div class="tobar-head fl">
+					<a href="#" class="topbar-logo fl">
+					<span><img src="/Images/logo.png" width="20" height="20"/></span>
+					</a>
+					<a href="index.html" class="topbar-home-link topbar-btn text-center fl"><span>壹信餐饮</span></a>
+				</div>
+			</div>
+			<div class="topbar-info">
+				<ul class="fr">
+					<li class="fl topbar-info-item">
+					<div class="dropdown">
+						<a href="#" class="topbar-btn">
+							<span class="fl text-normal" id="myname">小朱</span><span class="fl text-normal">号桌</span>
+						<span class="icon-arrow-down"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a onclick="Aclick()">退出</a></li>
+						</ul>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="view-body" style="background: white">
+			<div class="view-sidebar">
+				<div class="sidebar-content">
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="#">
+								<span class="icon"><b class="fl icon-arrow-down"></b></span>
+								<span class="text-normal">菜品管理</span>
+							</a>
+						</div>
+						<ul class="sidebar-trans">
+							<li>
+								<a href="#">
+									<b class="sidebar-icon"><img src="/Images/icon_author.png" width="16" height="16" /></b>
+									<span class="text-normal">点餐操作</span>
+								</a>
+							</li>
+							<li>
+								<a href="../file/food_state1.html">
+									<b class="sidebar-icon"><img src="/Images/icon_message.png" width="16" height="16" /></b>
+									<span class="text-normal">查看订单</span>
+								</a>
+							</li>
+							<li>
+								<a href="../file/food_state2.html">
+									<b class="sidebar-icon"><img src="/Images/icon_message.png" width="16" height="16" /></b>
+									<span class="text-normal">查看完成订单</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a href="../file/complain_user.html">
+								<span class="icon"><b class="fl icon-been-set"></b></span>
+								<span class="text-normal">服务(菜品)评价</span>
+							</a>
+						</div>
+					</div>
+					<div class="sidebar-nav">
+						<div class="sidebar-title">
+							<a onclick="endfun()">
+								<span class="icon"><b class="fl icon-been-set"></b></span>
+								<span class="text-normal">结账服务</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="mymarket" style="margin-left: 200px;margin-top: 20px">
+			</div>
+
+			<div id="jiazai" style="position:fixed;bottom:0;left:0;line-height:20px;font-size:16px;color:black;text-align:center;display:none;">
+				正在加载
+			</div>
+		</div>
+
+		<script>
+			$(".sidebar-title").live('click', function() {
+				if ($(this).parent(".sidebar-nav").hasClass("sidebar-nav-fold")) {
+					$(this).next().slideDown(200);
+					$(this).parent(".sidebar-nav").removeClass("sidebar-nav-fold");
+				} else {
+					$(this).next().slideUp(200);
+					$(this).parent(".sidebar-nav").addClass("sidebar-nav-fold");
+				}
+			});
+		</script>
+	</body>
+
+</html>
+<script src="/js/jquery-1.7.2.min.js"></script>
+<script src="/myjs/isEmpty.js"></script>
+<script src="/myjs/work/work_name.js"></script>
+<script src="/myjs/market/good_market_1.js"></script>
+<script src="/myjs/market/good_market_scroll_1.js"></script>
+<script src="/js/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="/myjs/user/end.js"></script>
