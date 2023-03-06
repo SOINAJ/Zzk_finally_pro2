@@ -8,7 +8,6 @@ $(document).ready(function () {
 var number = 0
 var now_num = 1
 
-// var state = ["panel-primary", "panel-success", "panel-info", "panel-warning", "panel-default"]
 
 function button3_onclick() {
     getGoods_user(now_num)
@@ -22,14 +21,11 @@ function get_market_number() {
         datatype: "json",
         contentType: "application/json;charset=UTF-8",
         success: function (dat) {
-            // number += parseInt(dat.data)
-            // console.log("mynumber"+number)
+
             var length = parseInt(dat.data)
             if (length % 7 == 0) {
                 number = length / 7
-                // number = number + 1
             } else {
-                // number = length % 6 + 1
                 number = parseInt( length / 7 ) + 1
             }
             console.log("number"+number)
