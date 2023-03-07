@@ -10,6 +10,8 @@ $(document).ready(function(){
 
 })
 
+
+
 function form_post(){
     if (!isEmpty($("#work").val())){
         console.log("not null")

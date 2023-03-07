@@ -17,6 +17,9 @@
 		<script type="text/javascript" src="/js/haidao.validate.js"></script>
 
 		<link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<!--		<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
+<!--		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<!--		<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 		<style type="text/css">
 			.Content-Main{
 				max-width: 500px;
@@ -226,6 +229,7 @@
 				<div class="padding-big background-color">
 					<div class="account-info clearfix">
 
+
 						<div class="Content-Main">
 							<div class="Content-Main1">
 								<h1>服务(菜品)评价</h1>
@@ -233,18 +237,21 @@
 							<form action="" method="" class="form-report">
 
 								<label>
-									<span>评价桌号:</span>
+<!--									<span>评价桌号:</span>-->
+									<label><h4>评价桌号:</h4></label>
 									<input type="text" name="user" id="user" style="width: 200px;" readonly value="1">
 								</label>
 
 								<label>
-									<span style="margin-left: -30px;width: 118px;">被评价人员(菜品):</span>
+									<label><h4>被评价人员(菜品):</h4></label>
+<!--									<span style="margin-left: -30px;width: 118px;">被评价人员(菜品):</span>-->
 									<input type="text" name="work" id="work" style="width: 200px;">
 								</label>
 
 								<label>
-									<span>评价情况:</span>
-									<select name="select2" class="select2">
+<!--									<span>评价情况:</span>-->
+									<label><h4>评价情况:</h4></label>
+									<select name="select2" class="select2" style="width: 180px;text-align: center;">
 										<option value="1">服务态度太差</option>
 										<option value="2">服务效果太低</option>
 										<option value="3">菜品质量不行</option>
@@ -254,7 +261,8 @@
 
 
 								<label class="otherlabel" style="display: none;">
-									<span>评价内容简介:</span>
+<!--									<span>评价内容简介:</span>-->
+									<label><h4>评价内容简介:</h4></label>
 									<textarea id="describe" name="describe" placeholder="详细填写评价内容" style="resize:none;"></textarea>
 								</label>
 
@@ -262,7 +270,7 @@
 							</form>
 							<label>
 								<!--      <input type="submit" class="button" value="提交">-->
-								<input type="button" class="button" value="提交" onclick="form_post()">
+								<input type="button" class="button" value="提交" onclick="form_post()" >
 							</label>
 						</div>
 

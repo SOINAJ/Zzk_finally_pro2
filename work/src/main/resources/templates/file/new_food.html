@@ -19,6 +19,137 @@
 		<script src="/js/bootstrap.min.js"></script>
 
 		<link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+		<style type="text/css">
+			.Content-Main{
+				max-width: 500px;
+				margin: auto;
+				margin-top: 50px;
+				padding: 20px 30px 20px 30px;
+				font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+				text-shadow: 1px 1px 1px #FFF;
+				border: 1px solid #DDD;
+				border-radius: 5px;
+				color: #888;
+				background: #FFF;
+			}
+			.Content-Main h1{
+				display: block;
+				padding: 0px 0px 10px 40px;
+				margin: -10px -30px 30px -30px;
+				font: 25px "Helvetica Neue", Helvetica, Arial, sans-serif;
+				border-bottom: 1px solid #DADADA;
+				color: #888;
+			}
+			.Content-Main h1>span{
+				display: block;
+				font-size: 11px;
+			}
+			.Content-Main label{
+				display: block;
+				margin: 0px 0px 5px;
+			}
+			.Content-Main label>span{
+				float: left;
+				width: 20%;
+				padding-right: 10px;
+				margin-top: 10px;
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				font-weight: bold;
+				text-align: right;
+				color: #333;
+			}
+			.Content-Main input[type="text"],.Content-Main textarea{
+				width: 70%;
+				height: 20px;
+				padding: 5px 0px 5px 5px;
+				margin-bottom: 16px;
+				margin-right: 6px;
+				margin-top: 2px;
+				line-height: 15px;
+				border-radius: 4px;
+				border: 1px solid #CCC;
+				color: #888;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			}
+			.select1{
+				width: 71%;
+				height: 35px;
+				margin-bottom: 16px;
+				margin-right: 6px;
+				margin-top: 2px;
+				line-height: 15px;
+				padding: 5px 0px 5px 5px;
+				border-radius: 4px;
+				border: 1px solid #CCC;
+				color: #888;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			}
+			.select2{
+				width: 25%;
+				height: auto;
+				padding-top: 1px;
+				padding-bottom: 3px;
+				padding-left: 1px;
+				margin-top: 5px;
+				margin-bottom: 10px;
+				border-radius: 4px;
+				border: 1px solid #CCC;
+				color: #888;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+			}
+			.Content-Main textarea{
+				width: 70%;
+				height: 100px;
+				padding: 5px 0px 0px 5px;
+			}
+			#url{
+				width: 70%;
+				height: auto;
+				padding: 5px 0px 25px 5px;
+			}
+			#describe{
+				width: 70%;
+				height: auto;
+				padding: 5px 0px 80px 5px;
+			}
+			#email{
+				width: 70%;
+				height: auto;
+				padding: 5px 0px 5px 5px;
+			}
+			#verifiation code{
+				width: 20px;
+				height: auto;
+			}
+			.button{
+				padding: 10px 25px 10px 25px;
+				margin-left: 111px;
+				border-radius: 4px;
+				border:1px solid #CCC;
+				background: #FFF;
+				color: #333;
+			}
+			.button:hover{
+				color: #333;
+				background-color: #EBEBEB;
+				border-color: #ADADAD;
+			}
+		</style>
+<!--		<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
+<!--		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<!--		<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
 	</head>
 
 	<body>
@@ -132,47 +263,89 @@
 				</div>
 			</div>
 			<div class="view-product background-color">
-				<div class="padding-big background-color">
+				<div class="padding-big background-color" style="background: white">
 					<div class="account-info clearfix">
-						<div class="panel panel-success" style="width: 550px;height: 450px;margin-left: 300px">
-							<div class="panel-heading">
-								<h3 class="panel-title"> <i class="glyphicon glyphicon-cloud"></i> 新菜品上传更新功能 </h3>
-							</div>
-							<p></p>
-							<form class="form-horizontal" role="form">
 
-								<div class="form-group">
-									<label class="col-sm-2 control-label">新菜品名</label>
-									<div class="col-sm-10">
-										<div class="msg_place1" style="display: none;color: red"><span id="msg_place"></span></div>
-										<input type="text" class="myfood_name form-control" placeholder="请输入新菜品名字">
-									</div>
-								</div>
+						<div class="Content-Main">
+							<div class="Content-Main1">
+								<h1>新菜品添加</h1>
+							</div>
+							<form action="" method="" class="form-report">
+
+								<label>
+									<label><h4>菜品名字:</h4></label>
+									<div class="msg_place1" style="display: none;color: red"><span id="msg_place"></span></div>
+									<input type="text" name="fname" id="fname" class="myfood_name" placeholder="请输入新菜品名字">
+								</label>
+
+								<label>
+									<label><h4>菜品库存:</h4></label>
+									<div class="msg_place1" style="display: none;color: red"><span id="msg_place2"></span></div>
+									<input type="text" name="fname" id="fname1" class="myfood_stack" placeholder="请输入菜品库存">
+								</label>
+							</form>
+							<label>
+								<input type="button" class="button" value="提交" onclick="getbtnFun()" >
+							</label>
+<!--						<div data-role="page" style="margin-left: 500px;width: 300px">-->
+<!--							<div data-role="header">-->
+<!--								<h1>新菜品添加</h1>-->
+<!--							</div>-->
+<!--							<div data-role="main" class="ui-content">-->
+<!--								<form>-->
+<!--									<label for="fname">菜品名字：</label>-->
+<!--									<div class="msg_place1" style="display: none;color: red"><span id="msg_place"></span></div>-->
+<!--									<input type="text" name="fname" id="fname" class="myfood_name" placeholder="请输入新菜品名字">-->
+
+<!--									<label for="fname">菜品库存：</label>-->
+<!--									<div class="msg_place1" style="display: none;color: red"><span id="msg_place2"></span></div>-->
+<!--									<input type="text" name="fname" id="fname1" class="myfood_stack" placeholder="请输入菜品库存">-->
+<!--									<input type="button" data-inline="true" value="提交" onclick="getbtnFun()">-->
+<!--								</form>-->
+<!--							</div>-->
+<!--						</div>-->
+
+
+<!--						<div class="panel panel-success" style="width: 550px;height: 450px;margin-left: 300px">-->
+<!--							<div class="panel-heading">-->
+<!--								<h3 class="panel-title"> <i class="glyphicon glyphicon-cloud"></i> 新菜品上传更新功能 </h3>-->
+<!--							</div>-->
+<!--							<p></p>-->
+<!--							<form class="form-horizontal" role="form">-->
+
 <!--								<div class="form-group">-->
-<!--									<label class="col-sm-2 control-label">新菜品编</label>-->
+<!--									<label class="col-sm-2 control-label">新菜品名</label>-->
 <!--									<div class="col-sm-10">-->
-<!--										<div class="msg_place1" style="display: none;color: red"><span id="msg_place1"></span></div>-->
-<!--										<input type="text" class="myfood_num form-control" placeholder="请输入新菜品编号">-->
+<!--&lt;!&ndash;										<div class="msg_place1" style="display: none;color: red"><span id="msg_place"></span></div>&ndash;&gt;-->
+<!--										<input type="text" class="myfood_name form-control" placeholder="请输入新菜品名字">-->
 <!--									</div>-->
 <!--								</div>-->
-								<div class="form-group">
-									<label class="col-sm-2 control-label">菜品库存</label>
-									<div class="col-sm-10">
-										<div class="msg_place1" style="display: none;color: red"><span id="msg_place2"></span></div>
-										<input type="text" class="myfood_stack form-control" placeholder="请输入菜品库存">
-									</div>
-								</div>
+								<!--								<div class="form-group">-->
+								<!--									<label class="col-sm-2 control-label">新菜品编</label>-->
+								<!--									<div class="col-sm-10">-->
+								<!--										<div class="msg_place1" style="display: none;color: red"><span id="msg_place1"></span></div>-->
+								<!--										<input type="text" class="myfood_num form-control" placeholder="请输入新菜品编号">-->
+								<!--									</div>-->
+								<!--								</div>-->
+<!--								<div class="form-group">-->
+<!--									<label class="col-sm-2 control-label">菜品库存</label>-->
+<!--									<div class="col-sm-10">-->
+<!--										&lt;!&ndash;										<div class="msg_place1" style="display: none;color: red"><span id="msg_place2"></span></div>&ndash;&gt;-->
+<!--										<input type="text" class="myfood_stack form-control" placeholder="请输入菜品库存">-->
+<!--									</div>-->
+<!--								</div>-->
 
 
-							</form>
-							<div class="form-group" style="margin-top: 200px">
-								<div class="col-sm-offset-2 col-sm-10">
-									<button type="submit" class="btn btn-default" style="margin-left: 250px;margin-top: -150px" onclick="getbtnFun()">提交订单</button>
-								</div>
-							</div>
-					</div>
+<!--							</form>-->
+<!--							<div class="form-group" style="margin-top: 200px">-->
+<!--								<div class="col-sm-offset-2 col-sm-10">-->
+<!--									<button type="submit" class="btn btn-default" style="margin-left: 250px;margin-top: -150px" onclick="getbtnFun()">提交订单</button>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--					</div>-->
 				</div>
 			</div>
+		</div>
 		</div>
 		</div>
 
