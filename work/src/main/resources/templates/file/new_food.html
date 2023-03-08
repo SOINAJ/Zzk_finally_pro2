@@ -1,178 +1,201 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>壹信餐饮</title>
-		<link rel="stylesheet" type="text/css" href="/css/identify.css" />
-		<link rel="stylesheet" type="text/css" href="/css/layout.css" />
-		<link rel="stylesheet" type="text/css" href="/css/account.css" />
-		<link rel="stylesheet" type="text/css" href="/css/style.css" />
-		<link rel="stylesheet" type="text/css" href="/css/control_index.css" />
-		<script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
-		<script type="text/javascript" src="/js/layer/layer.js"></script>
-		<script type="text/javascript" src="/js/haidao.offcial.general.js"></script>
-		<script type="text/javascript" src="/js/select.js"></script>
-		<script type="text/javascript" src="/js/haidao.validate.js"></script>
-		<link href="/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
-		<link href="/css/animate.min.css" rel="stylesheet">
-		<script src="/js/jquery.min.js"></script>
-		<script src="/js/bootstrap.min.js"></script>
+<head>
+    <meta charset="utf-8">
+    <title>壹信餐饮</title>
+    <link rel="stylesheet" type="text/css" href="/css/identify.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/account.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/control_index.css"/>
+    <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/js/layer/layer.js"></script>
+    <script type="text/javascript" src="/js/haidao.offcial.general.js"></script>
+    <script type="text/javascript" src="/js/select.js"></script>
+    <script type="text/javascript" src="/js/haidao.validate.js"></script>
+    <link href="/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <style type="text/css">
 
-		<link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
-		<style type="text/css">
-			.Content-Main{
-				max-width: 500px;
-				margin: auto;
-				margin-top: 50px;
-				padding: 20px 30px 20px 30px;
-				font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
-				text-shadow: 1px 1px 1px #FFF;
-				border: 1px solid #DDD;
-				border-radius: 5px;
-				color: #888;
-				background: #FFF;
-			}
-			.Content-Main h1{
-				display: block;
-				padding: 0px 0px 10px 40px;
-				margin: -10px -30px 30px -30px;
-				font: 25px "Helvetica Neue", Helvetica, Arial, sans-serif;
-				border-bottom: 1px solid #DADADA;
-				color: #888;
-			}
-			.Content-Main h1>span{
-				display: block;
-				font-size: 11px;
-			}
-			.Content-Main label{
-				display: block;
-				margin: 0px 0px 5px;
-			}
-			.Content-Main label>span{
-				float: left;
-				width: 20%;
-				padding-right: 10px;
-				margin-top: 10px;
-				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-				font-weight: bold;
-				text-align: right;
-				color: #333;
-			}
-			.Content-Main input[type="text"],.Content-Main textarea{
-				width: 70%;
-				height: 20px;
-				padding: 5px 0px 5px 5px;
-				margin-bottom: 16px;
-				margin-right: 6px;
-				margin-top: 2px;
-				line-height: 15px;
-				border-radius: 4px;
-				border: 1px solid #CCC;
-				color: #888;
-				-webkit-border-radius: 4px;
-				-moz-border-radius: 4px;
-				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-			}
-			.select1{
-				width: 71%;
-				height: 35px;
-				margin-bottom: 16px;
-				margin-right: 6px;
-				margin-top: 2px;
-				line-height: 15px;
-				padding: 5px 0px 5px 5px;
-				border-radius: 4px;
-				border: 1px solid #CCC;
-				color: #888;
-				-webkit-border-radius: 4px;
-				-moz-border-radius: 4px;
-				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-			}
-			.select2{
-				width: 25%;
-				height: auto;
-				padding-top: 1px;
-				padding-bottom: 3px;
-				padding-left: 1px;
-				margin-top: 5px;
-				margin-bottom: 10px;
-				border-radius: 4px;
-				border: 1px solid #CCC;
-				color: #888;
-				-webkit-border-radius: 4px;
-				-moz-border-radius: 4px;
-				-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-				box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-				-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-			}
-			.Content-Main textarea{
-				width: 70%;
-				height: 100px;
-				padding: 5px 0px 0px 5px;
-			}
-			#url{
-				width: 70%;
-				height: auto;
-				padding: 5px 0px 25px 5px;
-			}
-			#describe{
-				width: 70%;
-				height: auto;
-				padding: 5px 0px 80px 5px;
-			}
-			#email{
-				width: 70%;
-				height: auto;
-				padding: 5px 0px 5px 5px;
-			}
-			#verifiation code{
-				width: 20px;
-				height: auto;
-			}
-			.button{
-				padding: 10px 25px 10px 25px;
-				margin-left: 111px;
-				border-radius: 4px;
-				border:1px solid #CCC;
-				background: #FFF;
-				color: #333;
-			}
-			.button:hover{
-				color: #333;
-				background-color: #EBEBEB;
-				border-color: #ADADAD;
-			}
-		</style>
-<!--		<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
-<!--		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
-<!--		<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
-	</head>
+        /*.form-group{*/
+        /*    margin-left: 25px;*/
+        /*}*/
 
-	<body>
+        .Content-Main {
+            max-width: 500px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 20px 30px 20px 30px;
+            font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            text-shadow: 1px 1px 1px #FFF;
+            border: 1px solid #DDD;
+            border-radius: 5px;
+            color: #888;
+            background: #FFF;
+        }
+
+        .Content-Main h1 {
+            display: block;
+            padding: 0px 0px 10px 40px;
+            margin: -10px -30px 30px -30px;
+            font: 25px "Helvetica Neue", Helvetica, Arial, sans-serif;
+            border-bottom: 1px solid #DADADA;
+            color: #888;
+        }
+
+        .Content-Main h1 > span {
+            display: block;
+            font-size: 11px;
+        }
+
+        .Content-Main label {
+            display: block;
+            margin: 0px 0px 5px;
+        }
+
+        .Content-Main label > span {
+            float: left;
+            width: 20%;
+            padding-right: 10px;
+            margin-top: 10px;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: bold;
+            text-align: right;
+            color: #333;
+        }
+
+        .Content-Main input[type="text"], .Content-Main textarea {
+            width: 70%;
+            height: 20px;
+            padding: 5px 0px 5px 5px;
+            margin-bottom: 16px;
+            margin-right: 6px;
+            margin-top: 2px;
+            line-height: 15px;
+            border-radius: 4px;
+            border: 1px solid #CCC;
+            color: #888;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        }
+
+        .select1 {
+            width: 71%;
+            height: 35px;
+            margin-bottom: 16px;
+            margin-right: 6px;
+            margin-top: 2px;
+            line-height: 15px;
+            padding: 5px 0px 5px 5px;
+            border-radius: 4px;
+            border: 1px solid #CCC;
+            color: #888;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        }
+
+        .select2 {
+            width: 25%;
+            height: auto;
+            padding-top: 1px;
+            padding-bottom: 3px;
+            padding-left: 1px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #CCC;
+            color: #888;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+            -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        }
+
+        .Content-Main textarea {
+            width: 70%;
+            height: 100px;
+            padding: 5px 0px 0px 5px;
+        }
+
+        #url {
+            width: 70%;
+            height: auto;
+            padding: 5px 0px 25px 5px;
+        }
+
+        #describe {
+            width: 70%;
+            height: auto;
+            padding: 5px 0px 80px 5px;
+        }
+
+        #email {
+            width: 70%;
+            height: auto;
+            padding: 5px 0px 5px 5px;
+        }
+
+        #verifiation code {
+            width: 20px;
+            height: auto;
+        }
+
+        .button {
+            padding: 10px 25px 10px 25px;
+            margin-left: 111px;
+            border-radius: 4px;
+            border: 1px solid #CCC;
+            background: #FFF;
+            color: #333;
+        }
+
+        .button:hover {
+            color: #333;
+            background-color: #EBEBEB;
+            border-color: #ADADAD;
+        }
+    </style>
+    <!--		<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
+    <!--		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <!--		<script src="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+</head>
+
+<body>
 
 <div class="view-topbar">
-	<div class="topbar-console">
-		<div class="tobar-head fl">
-			<a href="#" class="topbar-logo fl">
-				<span><img src="/Images/logo.png" width="20" height="20"/></span>
-			</a>
-			<a href="index.html" class="topbar-home-link topbar-btn text-center fl"><span>壹信餐饮</span></a>
-		</div>
-	</div>
-	<div class="topbar-info">
-		<ul class="fr">
-<!--			<li class="fl dropdown topbar-notice topbar-btn">-->
-<!--				<a href="#" class="dropdown-toggle">-->
-<!--					<span class="icon-notice"></span>-->
-<!--					<span class="topbar-num have">0</span>-->
-<!--					&lt;!&ndash;have表示有消息，没有消息去掉have&ndash;&gt;-->
-<!--				</a>-->
-<!--			</li>-->
-			<!-- 					<li class="fl topbar-info-item strong">
+    <div class="topbar-console">
+        <div class="tobar-head fl">
+            <a href="#" class="topbar-logo fl">
+                <span><img src="/Images/logo.png" width="20" height="20"/></span>
+            </a>
+            <a href="index.html" class="topbar-home-link topbar-btn text-center fl"><span>壹信餐饮</span></a>
+        </div>
+    </div>
+    <div class="topbar-info">
+        <ul class="fr">
+            <!--			<li class="fl dropdown topbar-notice topbar-btn">-->
+            <!--				<a href="#" class="dropdown-toggle">-->
+            <!--					<span class="icon-notice"></span>-->
+            <!--					<span class="topbar-num have">0</span>-->
+            <!--					&lt;!&ndash;have表示有消息，没有消息去掉have&ndash;&gt;-->
+            <!--				</a>-->
+            <!--			</li>-->
+            <!-- 					<li class="fl topbar-info-item strong">
             <div class="dropdown">
                 <a href="#" class="dropdown-toggle topbar-btn">
                 <span class="fl">工单服务</span>
@@ -185,239 +208,223 @@
             </div>
             </li>
              -->
-			<!--					<li class="fl topbar-info-item">-->
-			<!--					<div class="dropdown">-->
-			<!--						<a href="#" class="topbar-btn">-->
-			<!--						<span class="fl text-normal">帮助与文档</span>-->
-			<!--						<span class="icon-arrow-down"></span>-->
-			<!--						</a>-->
-			<!--						<ul class="dropdown-menu">-->
-			<!--							<li><a href="#">模板开发手册</a></li>-->
-			<!--							<li><a href="#">某某数据字典</a></li>-->
-			<!--						</ul>-->
-			<!--					</div>-->
-			<!--					</li>-->
-			<li class="fl topbar-info-item">
-				<div class="dropdown" id="mydrop" onclick="c()">
-					<a href="#" class="topbar-btn">
-						<span class="fl text-normal" id="myname">小朱</span>
-						<span class="icon-arrow-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="../login.html">退出</a></li>
-					</ul>
-				</div>
-			</li>
-		</ul>
-	</div>
+            <!--					<li class="fl topbar-info-item">-->
+            <!--					<div class="dropdown">-->
+            <!--						<a href="#" class="topbar-btn">-->
+            <!--						<span class="fl text-normal">帮助与文档</span>-->
+            <!--						<span class="icon-arrow-down"></span>-->
+            <!--						</a>-->
+            <!--						<ul class="dropdown-menu">-->
+            <!--							<li><a href="#">模板开发手册</a></li>-->
+            <!--							<li><a href="#">某某数据字典</a></li>-->
+            <!--						</ul>-->
+            <!--					</div>-->
+            <!--					</li>-->
+            <li class="fl topbar-info-item">
+                <div class="dropdown" id="mydrop" onclick="c()">
+                    <a href="#" class="topbar-btn">
+                        <span class="fl text-normal" id="myname">小朱</span>
+                        <span class="icon-arrow-down"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../login.html">退出</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
-		<div class="view-body">
-			<div class="view-sidebar">
-				<div class="sidebar-content">
-					<div class="sidebar-nav">
-						<div class="sidebar-title">
-							<a href="#">
-								<span class="icon"><b class="fl icon-arrow-down"></b></span>
-								<span class="text-normal">菜品管理</span>
-							</a>
-						</div>
-						<ul class="sidebar-trans">
-							<li>
-								<a href="#">
-									<b class="sidebar-icon"><img src="/Images/icon_author.png" width="16" height="16" /></b>
-									<span class="text-normal">新菜品添加</span>
-								</a>
-							</li>
-							<li>
-								<a href="../file/Allfood.html">
-									<b class="sidebar-icon"><img src="/Images/icon_message.png" width="16" height="16" /></b>
-									<span class="text-normal">菜品查看及管理</span>
-								</a>
-							</li>
-							<li>
-								<a href="../file/food_state.html">
-									<b class="sidebar-icon"><img src="/Images/icon_gold.png" width="16" height="16" /></b>
-									<span class="text-normal">菜品状态</span>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="sidebar-nav">
-						<div class="sidebar-title">
-							<a href="../file/account.html">
-								<span class="icon"><b class="fl icon-been-set"></b></span>
-								<span class="text-normal">账号管理</span>
-							</a>
-						</div>
+<div class="view-body">
+    <div class="view-sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-nav">
+                <div class="sidebar-title">
+                    <a href="#">
+                        <span class="icon"><b class="fl icon-arrow-down"></b></span>
+                        <span class="text-normal">菜品管理</span>
+                    </a>
+                </div>
+                <ul class="sidebar-trans">
+                    <li>
+                        <a href="#">
+                            <b class="sidebar-icon"><img src="/Images/icon_author.png" width="16" height="16"/></b>
+                            <span class="text-normal">新菜品添加</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../file/Allfood.html">
+                            <b class="sidebar-icon"><img src="/Images/icon_message.png" width="16" height="16"/></b>
+                            <span class="text-normal">菜品查看及管理</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../file/food_state.html">
+                            <b class="sidebar-icon"><img src="/Images/icon_gold.png" width="16" height="16"/></b>
+                            <span class="text-normal">菜品状态</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-nav">
+                <div class="sidebar-title">
+                    <a href="../file/account.html">
+                        <span class="icon"><b class="fl icon-been-set"></b></span>
+                        <span class="text-normal">账号管理</span>
+                    </a>
+                </div>
 
-					</div>
-					<div class="sidebar-nav">
-						<div class="sidebar-title">
-							<a href="../file/talk_mes.html">
-								<span class="icon"><b class="fl icon-been-set"></b></span>
-								<span class="text-normal">评价信息</span>
-							</a>
-						</div>
+            </div>
+            <div class="sidebar-nav">
+                <div class="sidebar-title">
+                    <a href="../file/talk_mes.html">
+                        <span class="icon"><b class="fl icon-been-set"></b></span>
+                        <span class="text-normal">评价信息</span>
+                    </a>
+                </div>
 
+            </div>
+        </div>
+    </div>
+    <div class="view-product background-color">
+        <div class="padding-big background-color" style="background: #f2f2f2;">
+			<div class="col-sm-5">
+				<div class="ibox float-e-margins">
+					<div class="ibox-title" style="margin-left: 400px;width: 500px">
+						<h5>新菜品添加</h5>
 					</div>
-				</div>
-			</div>
-			<div class="view-product background-color">
-				<div class="padding-big background-color" style="background: white">
-					<div class="account-info clearfix">
+					<div class="ibox-content"  style="margin-left: 400px;width: 500px">
+						<form class="form-horizontal">
+<!--							<p>新菜品添加(⊙o⊙)</p>-->
 
-						<div class="Content-Main">
-							<div class="Content-Main1">
-								<h1>新菜品添加</h1>
+							<div class="form-group" style="margin-left: 25px;">
+
+                                <label>
+                                    <label><h4>菜品名字:</h4></label>
+                                    <div class="msg_place1" style="display: none;color: red"><span id="msg_place"></span></div>
+                                    <input type="text" name="fname" id="fname" class="myfood_name" placeholder="请输入新菜品名字" style="border-bottom: 1px black dashed;">
+                                </label>
 							</div>
-							<form action="" method="" class="form-report">
-
-								<label>
-									<label><h4>菜品名字:</h4></label>
-									<div class="msg_place1" style="display: none;color: red"><span id="msg_place"></span></div>
-									<input type="text" name="fname" id="fname" class="myfood_name" placeholder="请输入新菜品名字">
-								</label>
-
-								<label>
-									<label><h4>菜品库存:</h4></label>
-									<div class="msg_place1" style="display: none;color: red"><span id="msg_place2"></span></div>
-									<input type="text" name="fname" id="fname1" class="myfood_stack" placeholder="请输入菜品库存">
-								</label>
-							</form>
-							<label>
-								<input type="button" class="button" value="提交" onclick="getbtnFun()" >
-							</label>
-<!--						<div data-role="page" style="margin-left: 500px;width: 300px">-->
-<!--							<div data-role="header">-->
-<!--								<h1>新菜品添加</h1>-->
-<!--							</div>-->
-<!--							<div data-role="main" class="ui-content">-->
-<!--								<form>-->
-<!--									<label for="fname">菜品名字：</label>-->
-<!--									<div class="msg_place1" style="display: none;color: red"><span id="msg_place"></span></div>-->
-<!--									<input type="text" name="fname" id="fname" class="myfood_name" placeholder="请输入新菜品名字">-->
-
-<!--									<label for="fname">菜品库存：</label>-->
-<!--									<div class="msg_place1" style="display: none;color: red"><span id="msg_place2"></span></div>-->
-<!--									<input type="text" name="fname" id="fname1" class="myfood_stack" placeholder="请输入菜品库存">-->
-<!--									<input type="button" data-inline="true" value="提交" onclick="getbtnFun()">-->
-<!--								</form>-->
-<!--							</div>-->
-<!--						</div>-->
 
 
-<!--						<div class="panel panel-success" style="width: 550px;height: 450px;margin-left: 300px">-->
-<!--							<div class="panel-heading">-->
-<!--								<h3 class="panel-title"> <i class="glyphicon glyphicon-cloud"></i> 新菜品上传更新功能 </h3>-->
-<!--							</div>-->
-<!--							<p></p>-->
-<!--							<form class="form-horizontal" role="form">-->
-
-<!--								<div class="form-group">-->
-<!--									<label class="col-sm-2 control-label">新菜品名</label>-->
-<!--									<div class="col-sm-10">-->
-<!--&lt;!&ndash;										<div class="msg_place1" style="display: none;color: red"><span id="msg_place"></span></div>&ndash;&gt;-->
-<!--										<input type="text" class="myfood_name form-control" placeholder="请输入新菜品名字">-->
-<!--									</div>-->
-<!--								</div>-->
-								<!--								<div class="form-group">-->
-								<!--									<label class="col-sm-2 control-label">新菜品编</label>-->
-								<!--									<div class="col-sm-10">-->
-								<!--										<div class="msg_place1" style="display: none;color: red"><span id="msg_place1"></span></div>-->
-								<!--										<input type="text" class="myfood_num form-control" placeholder="请输入新菜品编号">-->
-								<!--									</div>-->
-								<!--								</div>-->
-<!--								<div class="form-group">-->
-<!--									<label class="col-sm-2 control-label">菜品库存</label>-->
-<!--									<div class="col-sm-10">-->
-<!--										&lt;!&ndash;										<div class="msg_place1" style="display: none;color: red"><span id="msg_place2"></span></div>&ndash;&gt;-->
-<!--										<input type="text" class="myfood_stack form-control" placeholder="请输入菜品库存">-->
-<!--									</div>-->
-<!--								</div>-->
-
-
-<!--							</form>-->
-<!--							<div class="form-group" style="margin-top: 200px">-->
-<!--								<div class="col-sm-offset-2 col-sm-10">-->
-<!--									<button type="submit" class="btn btn-default" style="margin-left: 250px;margin-top: -150px" onclick="getbtnFun()">提交订单</button>-->
-<!--								</div>-->
-<!--							</div>-->
-<!--					</div>-->
+							<div class="form-group" style="margin-left: 25px;">
+                                <label>
+                                    <label><h4>菜品库存:</h4></label>
+                                    <div class="msg_place1" style="display: none;color: red"><span id="msg_place2"></span></div>
+                                    <input type="text" name="fname" id="fname1" class="myfood_stack" placeholder="请输入菜品库存" style="border-bottom: 1px black dashed;">
+                                </label>
+                            </div>
+                        </form>
+                        <label>
+                            <input type="button" class="button" value="提交" onclick="getbtnFun()" >
+                        </label>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
-		</div>
-		</div>
-		</div>
+            <!--					<div class="account-info clearfix">-->
 
-	</body>
+
+
+            <!--						-->
+
+            <!--&lt;!&ndash;							<form action="" method="" class="form-report">&ndash;&gt;-->
+
+
+
+
+
+
+            <!--&lt;!&ndash;						<div data-role="page" style="margin-left: 500px;width: 300px">&ndash;&gt;-->
+            <!--&lt;!&ndash;							<div data-role="header">&ndash;&gt;-->
+            <!--&lt;!&ndash;								<h1>新菜品添加</h1>&ndash;&gt;-->
+            <!--&lt;!&ndash;							</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;							<div data-role="main" class="ui-content">&ndash;&gt;-->
+            <!--&lt;!&ndash;								<form>&ndash;&gt;-->
+            <!--&lt;!&ndash;									<label for="fname">菜品名字：</label>&ndash;&gt;-->
+            <!--&lt;!&ndash;									<div class="msg_place1" style="display: none;color: red"><span id="msg_place"></span></div>&ndash;&gt;-->
+            <!--&lt;!&ndash;									<input type="text" name="fname" id="fname" class="myfood_name" placeholder="请输入新菜品名字">&ndash;&gt;-->
+
+            <!--&lt;!&ndash;									<label for="fname">菜品库存：</label>&ndash;&gt;-->
+            <!--&lt;!&ndash;									<div class="msg_place1" style="display: none;color: red"><span id="msg_place2"></span></div>&ndash;&gt;-->
+            <!--&lt;!&ndash;									<input type="text" name="fname" id="fname1" class="myfood_stack" placeholder="请输入菜品库存">&ndash;&gt;-->
+
+            <!--&lt;!&ndash;								</form>&ndash;&gt;-->
+            <!--&lt;!&ndash;							</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;						</div>&ndash;&gt;-->
+        </div>
+    </div>
+</div>
+
+</body>
 
 </html>
 <script src="/myjs/isEmpty.js"></script>
 <script src="/myjs/work/work_name.js"></script>
 <script src="/js/plugins/sweetalert/sweetalert.min.js"></script>
 <script>
-	$(".sidebar-title").live('click', function() {
-		if ($(this).parent(".sidebar-nav").hasClass("sidebar-nav-fold")) {
-			$(this).next().slideDown(200);
-			$(this).parent(".sidebar-nav").removeClass("sidebar-nav-fold");
-		} else {
-			$(this).next().slideUp(200);
-			$(this).parent(".sidebar-nav").addClass("sidebar-nav-fold");
-		}
-	});
+    $(".sidebar-title").live('click', function () {
+        if ($(this).parent(".sidebar-nav").hasClass("sidebar-nav-fold")) {
+            $(this).next().slideDown(200);
+            $(this).parent(".sidebar-nav").removeClass("sidebar-nav-fold");
+        } else {
+            $(this).next().slideUp(200);
+            $(this).parent(".sidebar-nav").addClass("sidebar-nav-fold");
+        }
+    });
 
-	function c() {
-		var oh = $("#mydrop").attr("class")
-		if (oh == "dropdown"){
-			$(".dropdown").attr("class","dropdown open")
-		}else {
-			$(".dropdown").attr("class","dropdown")
-		}
-	}
+    function c() {
+        var oh = $("#mydrop").attr("class")
+        if (oh == "dropdown") {
+            $(".dropdown").attr("class", "dropdown open")
+        } else {
+            $(".dropdown").attr("class", "dropdown")
+        }
+    }
 
-	function getbtnFun(){
-		var name = $(".myfood_name").val()
+    function getbtnFun() {
+        var name = $(".myfood_name").val()
 
-		var stack = $(".myfood_stack").val()
-		if(!isEmpty(name)&&!isEmpty(stack)){
-			$.ajax({
-				url: "../foods",
-				type: "POST",
-				datatype: "json",
-				contentType: "application/json;charset=UTF-8",
-				data: {
-					"myname":name,
-					"mystack":stack
-				},
-				success:function (msg){
-					if (msg.data == '1') {
-						swal({
-							title: "菜品发布",
-							text: "你新建的菜品已上传",
-							type: "success",
-							timeout: "3000"
-						})
-					}else{
-						swal({
-							title: "菜品发布",
-							text: "你新建的订单上传失败",
-							type: "warning",
-							timeout: "3000"
-						})
-					}
-				},
-				error:function (msg){
-					console.log("error")
-				}
-			})
-		}else {
-			swal({
-				title: "订单发布",
-				text: "订单信息不能为空",
-				type: "warning",
-				timeout: "3000"
-			})
-		}
+        var stack = $(".myfood_stack").val()
+        if (!isEmpty(name) && !isEmpty(stack)) {
+            $.ajax({
+                url: "../foods",
+                type: "POST",
+                datatype: "json",
+                contentType: "application/json;charset=UTF-8",
+                data: {
+                    "myname": name,
+                    "mystack": stack
+                },
+                success: function (msg) {
+                    if (msg.data == '1') {
+                        swal({
+                            title: "菜品发布",
+                            text: "你新建的菜品已上传",
+                            type: "success",
+                            timeout: "3000"
+                        })
+                    } else {
+                        swal({
+                            title: "菜品发布",
+                            text: "你新建的订单上传失败",
+                            type: "warning",
+                            timeout: "3000"
+                        })
+                    }
+                },
+                error: function (msg) {
+                    console.log("error")
+                }
+            })
+        } else {
+            swal({
+                title: "订单发布",
+                text: "订单信息不能为空",
+                type: "warning",
+                timeout: "3000"
+            })
+        }
 
-	}
+    }
 </script>

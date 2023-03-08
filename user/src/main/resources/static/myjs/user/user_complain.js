@@ -20,7 +20,7 @@ function form_post(){
             type:"post",
             contentType:"application/json",
             datatype:"json",
-            data:$(".form-report").serialize(),
+            data:$(".form-horizontal").serialize(),
             success:function(data){
                 runback(data.code)
                 console.log(data)

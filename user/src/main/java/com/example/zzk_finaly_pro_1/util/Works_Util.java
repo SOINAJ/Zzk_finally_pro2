@@ -55,10 +55,19 @@ public class Works_Util {
                 need_data[i] = str2;
             }
             complain.setNumber_zhuo(Integer.valueOf(need_data[0]));
-            complain.setWorker(need_data[1]);
+//
             complain.setDate(new Date());
-//            complain.setMessage(need_data[2]);
+
             switch (need_data[2]) {
+                case "1":
+                    complain.setWorker(need_data[1]+"号菜品");
+                    break;
+                case "2":
+                    complain.setWorker(need_data[1]+"号工作人员");
+                    break;
+            }
+//            complain.setMessage(need_data[2]);
+            switch (need_data[3]) {
                 case "1":
                     complain.setMessage("服务态度太差");
                     break;
@@ -69,7 +78,7 @@ public class Works_Util {
                     complain.setMessage("人员消息异常");
                     break;
                 case "4":
-                    complain.setMessage(URLDecoder.decode(need_data[3], "UTF-8"));
+                    complain.setMessage(URLDecoder.decode(need_data[4], "UTF-8"));
                     break;
             }
 

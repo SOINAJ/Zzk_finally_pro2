@@ -19,5 +19,6 @@ public class ComplainController {
     public Result post_new_complain(@RequestBody String data){
         System.out.println(data);
         return complain_zzkService.insert_newComplain(data);
+
     }
 }

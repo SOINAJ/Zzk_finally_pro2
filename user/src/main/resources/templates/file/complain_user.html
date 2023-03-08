@@ -16,6 +16,9 @@
 		<script type="text/javascript" src="/js/select.js"></script>
 		<script type="text/javascript" src="/js/haidao.validate.js"></script>
 
+		<link href="/css/plugins/iCheck/custom.css" rel="stylesheet">
+		<link href="/css/animate.min.css" rel="stylesheet">
+		<link href="/css/style.min862f.css?v=4.1.0" rel="stylesheet">
 		<link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
 <!--		<link rel="stylesheet" href="https://apps.bdimg.com/libs/jquerymobile/1.4.5/jquery.mobile-1.4.5.min.css">-->
 <!--		<script src="https://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>-->
@@ -227,54 +230,102 @@
 			</div>
 			<div class="view-product background-color">
 				<div class="padding-big background-color">
-					<div class="account-info clearfix">
 
+					<div class="col-sm-5">
+						<div class="ibox float-e-margins">
+							<div class="ibox-title" style="margin-left: 400px;width: 500px">
+								<h5>服务(菜品)评价</h5>
 
-						<div class="Content-Main">
-							<div class="Content-Main1">
-								<h1>服务(菜品)评价</h1>
 							</div>
-							<form action="" method="" class="form-report">
-
+							<div class="ibox-content"  style="margin-left: 400px;width: 500px">
+								<form class="form-horizontal">
+									<div class="form-group" style="margin-left: 25px;margin-bottom: 20px">
+										<label>
+											<!--									<span>评价桌号:</span>-->
+											<label ><h4 style="margin-bottom: 10px;">评价桌号:</h4></label>
+											<input type="text" name="user" id="user" style="width: 13px;border-bottom: 1px black dashed;" readonly value="1">
+										</label>
+									</div>
+									<div class="form-group" style="margin-left: 25px;margin-bottom: 20px">
+										<label>
+											<label><h4 style="margin-bottom: 10px;">被评价人员(菜品)编号:</h4></label>
+											<!--									<span style="margin-left: -30px;width: 118px;">被评价人员(菜品):</span>-->
+											<input type="text" name="work" id="work" style="width: 200px;border-bottom: 1px black dashed;"  placeholder="请输入要投诉的菜品或人员编号">
+											<select name="select3" class="select3">
+												<option value="1">号菜品</option>
+												<option value="2">号工作人员</option>
+											</select>
+										</label>
+									</div>
+									<div class="form-group" style="margin-left: 25px;margin-bottom: 20px">
+										<label>
+											<!--									<span>评价情况:</span>-->
+											<label><h4 style="margin-bottom: 10px;">评价情况:</h4></label>
+											<select name="select2" class="select2" style="margin-bottom: 20px;width: 180px;text-align: center">
+												<option value="1">服务态度太差</option>
+												<option value="2">服务效果太低</option>
+												<option value="3">菜品质量不行</option>
+												<option value="4">其他</option>
+											</select>
+										</label>
+									</div>
+									<div class="form-group" style="margin-left: 25px;margin-bottom: 20px">
+										<label class="otherlabel" style="display: none;">
+											<!--									<span>评价内容简介:</span>-->
+											<label><h4 style="margin-bottom: 10px;">评价内容简介:</h4></label>
+											<textarea id="describe" name="describe" placeholder="详细填写评价内容" style="resize:none;"></textarea>
+										</label>
+									</div>
+								</form>
 								<label>
-<!--									<span>评价桌号:</span>-->
-									<label><h4>评价桌号:</h4></label>
-									<input type="text" name="user" id="user" style="width: 200px;" readonly value="1">
+									<input type="button" class="button" value="提交" onclick="form_post()" >
 								</label>
-
-								<label>
-									<label><h4>被评价人员(菜品):</h4></label>
-<!--									<span style="margin-left: -30px;width: 118px;">被评价人员(菜品):</span>-->
-									<input type="text" name="work" id="work" style="width: 200px;">
-								</label>
-
-								<label>
-<!--									<span>评价情况:</span>-->
-									<label><h4>评价情况:</h4></label>
-									<select name="select2" class="select2" style="width: 180px;text-align: center;">
-										<option value="1">服务态度太差</option>
-										<option value="2">服务效果太低</option>
-										<option value="3">菜品质量不行</option>
-										<option value="4">其他</option>
-									</select>
-								</label>
-
-
-								<label class="otherlabel" style="display: none;">
-<!--									<span>评价内容简介:</span>-->
-									<label><h4>评价内容简介:</h4></label>
-									<textarea id="describe" name="describe" placeholder="详细填写评价内容" style="resize:none;"></textarea>
-								</label>
-
-
+							</div>
 							</form>
-							<label>
-								<!--      <input type="submit" class="button" value="提交">-->
-								<input type="button" class="button" value="提交" onclick="form_post()" >
-							</label>
 						</div>
+					</div>
 
-				</div>
+
+<!--					<div class="account-info clearfix">-->
+
+
+<!--						<div class="Content-Main">-->
+<!--							<div class="Content-Main1">-->
+<!--								<h1>服务(菜品)评价</h1>-->
+<!--							</div>-->
+<!--							<form action="" method="" class="form-report">-->
+<!--								<label>-->
+<!--&lt;!&ndash;									<span>评价桌号:</span>&ndash;&gt;-->
+<!--									<label><h4>评价桌号:</h4></label>-->
+<!--									<input type="text" name="user" id="user" style="width: 200px;" readonly value="1">-->
+<!--								</label>-->
+<!--								<label>-->
+<!--									<label><h4>被评价人员(菜品):</h4></label>-->
+<!--&lt;!&ndash;									<span style="margin-left: -30px;width: 118px;">被评价人员(菜品):</span>&ndash;&gt;-->
+<!--									<input type="text" name="work" id="work" style="width: 200px;">-->
+<!--								</label>-->
+<!--								<label>-->
+<!--&lt;!&ndash;									<span>评价情况:</span>&ndash;&gt;-->
+<!--									<label><h4>评价情况:</h4></label>-->
+<!--									<select name="select2" class="select2" style="width: 180px;text-align: center;">-->
+<!--										<option value="1">服务态度太差</option>-->
+<!--										<option value="2">服务效果太低</option>-->
+<!--										<option value="3">菜品质量不行</option>-->
+<!--										<option value="4">其他</option>-->
+<!--									</select>-->
+<!--								</label>-->
+<!--								<label class="otherlabel" style="display: none;">-->
+<!--&lt;!&ndash;									<span>评价内容简介:</span>&ndash;&gt;-->
+<!--									<label><h4>评价内容简介:</h4></label>-->
+<!--									<textarea id="describe" name="describe" placeholder="详细填写评价内容" style="resize:none;"></textarea>-->
+<!--								</label>-->
+<!--							</form>-->
+<!--							<label>-->
+<!--								<input type="button" class="button" value="提交" onclick="form_post()" >-->
+<!--							</label>-->
+<!--						</div>-->
+
+<!--				</div>-->
 			</div>
 		</div>
 		</div>
