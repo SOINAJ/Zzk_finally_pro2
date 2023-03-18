@@ -13,6 +13,7 @@ public class Foodmes_zzk {
 //    private int number_cai;
     private int stack;
 
+
     public Foodmes_zzk(String food, int stack) {
         this.food = food;
         this.stack = stack;

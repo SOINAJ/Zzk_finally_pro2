@@ -34,10 +34,11 @@ public class LoginController {
     }
 
     @PostMapping("/loginSystem")
-    public String login(String username){
+    public String login(String username,String work_num){
 
         try {
-            Result loginsys = table_zzkServiec.loginsys(username);
+//            System.out.println(work_num);
+            Result loginsys = table_zzkServiec.loginsys(username,work_num);
             switch (loginsys.getCode()){
                 case 20011:
                     Table_zzk table_zzk = (Table_zzk) loginsys.getData();
