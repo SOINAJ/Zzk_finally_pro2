@@ -16,6 +16,7 @@ public class Works_Util {
 
             String str1 = this_data[1].substring(this_data[1].indexOf("=") + 1);
             need_data[1] = str1;
+            need_data[2] = this_data[2].substring(this_data[2].indexOf("=") + 1);
         } catch (UnsupportedEncodingException e) {
             throw new RuntimeException(e);
         }

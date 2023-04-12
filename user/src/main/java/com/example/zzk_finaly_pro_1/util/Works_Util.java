@@ -21,9 +21,9 @@ public class Works_Util {
                 need_data[i] = str2;
             }
             goods_zzk.setNumber_cai(Integer.parseInt(need_data[0]));
-            goods_zzk.setNumber_zhuo(Integer.parseInt(need_data[1]));
+            goods_zzk.setNumber_zhuo(Integer.parseInt(need_data[2]));
 //            complain.setMessage(need_data[2]);
-            switch (need_data[2]) {
+            switch (need_data[1]) {
                 case "1":
                     goods_zzk.setWay("煎");
                     break;

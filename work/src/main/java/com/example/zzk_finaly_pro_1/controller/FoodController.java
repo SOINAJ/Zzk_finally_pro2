@@ -17,7 +17,7 @@ public class FoodController {
 
     @PostMapping
     public Result post_NewGoods(@RequestBody String data) {
-//        System.out.println(data);
+        System.out.println(data);
 
         return foodmesService.post_new_food(data);
     }

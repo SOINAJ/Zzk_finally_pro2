@@ -11,4 +11,5 @@ public class Table_zzk {
     private int id;
     private int state;
     private String passwd;
+    private String name;
 }

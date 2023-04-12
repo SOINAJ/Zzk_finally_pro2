@@ -73,6 +73,7 @@ function getGoods_user(num) {
                     '<option value="4">焗</option>' +
                     '</select>' +
                     '</label>' +
+                    '<tr><th>菜品单价</th><td>' + dat.data[i].money + '</td></tr>' +
                     '</table>' +
                     '</div>'
             }

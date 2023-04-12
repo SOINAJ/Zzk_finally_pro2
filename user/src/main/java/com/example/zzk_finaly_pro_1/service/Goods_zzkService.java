@@ -20,6 +20,13 @@ public class Goods_zzkService {
     @Autowired
     private Foodmes_zzkDao foodmes_zzkDao;
 
+
+    public Result get_money(String number){
+        Integer integer = goods_zzkDaol.get_money(number);
+        goods_zzkDaol.updata_mes(number);
+        return Result.Save_ativition(integer);
+    }
+
     public Result insert_newGoods(String data){
         Goods_zzk goods_zzk = Works_Util.GoodsUtil(data);
         Integer integer = goods_zzkDaol.insert_newGoods(goods_zzk);

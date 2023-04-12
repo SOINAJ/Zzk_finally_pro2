@@ -313,6 +313,14 @@
                                     <input type="text" name="fname" id="fname1" class="myfood_stack" placeholder="请输入菜品库存" style="border-bottom: 1px black dashed;">
                                 </label>
                             </div>
+
+                            <div class="form-group" style="margin-left: 25px;">
+                                <label>
+                                    <label><h4>菜品单价:</h4></label>
+                                    <div class="msg_place1" style="display: none;color: red"><span id="msg_place3"></span></div>
+                                    <input type="text" name="fname" id="fname2" class="myfood_money" placeholder="请输入菜品库存" style="border-bottom: 1px black dashed;">
+                                </label>
+                            </div>
                         </form>
                         <label>
                             <input type="button" class="button" value="提交" onclick="getbtnFun()" >
@@ -386,6 +394,7 @@
         var name = $(".myfood_name").val()
 
         var stack = $(".myfood_stack").val()
+        var money = $(".myfood_money").val()
         if (!isEmpty(name) && !isEmpty(stack)) {
             $.ajax({
                 url: "../foods",
@@ -394,7 +403,8 @@
                 contentType: "application/json;charset=UTF-8",
                 data: {
                     "myname": name,
-                    "mystack": stack
+                    "mystack": stack,
+                    "mymoney": money
                 },
                 success: function (msg) {
                     if (msg.data == '1') {

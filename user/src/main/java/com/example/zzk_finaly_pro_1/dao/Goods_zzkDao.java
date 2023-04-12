@@ -4,6 +4,7 @@ import com.example.zzk_finaly_pro_1.POJO.Goods_zzk;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -22,4 +23,10 @@ public interface Goods_zzkDao {
 
     @Insert("insert into goods_zzk (number_cai,number_zhuo,way) values (#{number_cai},#{number_zhuo},#{way})")
     public Integer insert_newGoods(Goods_zzk goods_zzk);
+
+    @Select("select sum(foodmes_zzk.money) from goods_zzk inner join foodmes_zzk on goods_zzk.number_cai = foodmes_zzk.id and goods_zzk.state = 1 where goods_zzk.number_zhuo = #{param1}")
+    public Integer get_money(String number);
+
+    @Update("update goods_zzk set state1 = 1 where number_zhuo = #{number} and state1 = 0")
+    public Integer updata_mes(String number);
 }

@@ -11,11 +11,14 @@ public interface FoodmesDao {
 
     public Integer delete_good_stack(String state,String data);
 
-    @Insert("insert into foodmes_zzk (food,stack) values (#{food},#{stack})")
+    @Insert("insert into foodmes_zzk (food,stack,money) values (#{food},#{stack},#{money})")
     public Integer post_newFood(Foodmes_zzk foodmes);
 
     @Select("select * from foodmes_zzk limit ${param1},${param2}")
     public List<Foodmes_zzk> getAll_mes(String offset,String limit);
+
+    @Select("select * from foodmes_zzk")
+    public List<Foodmes_zzk> getAll_mes_num();
 
 //    @Select("select food from foodmes_zzk where id in (${param1})")
 //    public List<String> get_goods_caiName(String data);

@@ -13,8 +13,9 @@ public class Goods_zzk {
     private int number_zhuo;
     private String way;
     private int state;
-
+private int state1;
     private String food;
+
 
     public Goods_zzk(int id, int number_cai, int number_zhuo, String way, int state) {
         this.id = id;

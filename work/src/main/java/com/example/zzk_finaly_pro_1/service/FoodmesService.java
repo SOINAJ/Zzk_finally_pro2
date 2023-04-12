@@ -1,5 +1,6 @@
 package com.example.zzk_finaly_pro_1.service;
 
+import com.example.zzk_finaly_pro_1.POJO.Complain_zzk;
 import com.example.zzk_finaly_pro_1.POJO.Foodmes_zzk;
 import com.example.zzk_finaly_pro_1.dao.FoodmesDao;
 import com.example.zzk_finaly_pro_1.util.Bootstrap;
@@ -18,7 +19,7 @@ public class FoodmesService {
 
     public Result post_new_food(String data){
         String[] need_data = Works_Util.deal_newfood_data(data);
-        Integer oh = foodmesDao.post_newFood(new Foodmes_zzk(need_data[0],Integer.valueOf(need_data[1])));
+        Integer oh = foodmesDao.post_newFood(new Foodmes_zzk(need_data[0],Integer.valueOf(need_data[1]),Integer.valueOf(need_data[2])));
         return Result.Save_ativition(oh);
     }
 
@@ -27,8 +28,9 @@ public class FoodmesService {
         if (offset != null && limit != null){
             list = foodmesDao.getAll_mes(offset, limit);
         }
-        Integer number = list.size();
-        return new Bootstrap(list,number);
+//        List<Foodmes_zzk> list = foodmesDao.getAll_mes(offset, limit);
+        List<Foodmes_zzk> number = foodmesDao.getAll_mes_num();
+        return new Bootstrap(list,number.size());
     }
 
     public Result updata_newfood(String data){

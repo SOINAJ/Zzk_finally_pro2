@@ -15,6 +15,11 @@ public class GoodsController {
     @Autowired
     private Goods_zzkService goods_zzkService;
 
+    @GetMapping("/3/{number}")
+    public Result get_money(@PathVariable String number){
+        System.out.println(number);
+        return goods_zzkService.get_money(number);
+    }
 
     @PutMapping
     public Result putNew_good(@RequestBody String data){
