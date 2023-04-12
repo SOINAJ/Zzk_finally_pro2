@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:https="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8">
 		<title>壹信餐饮</title>
+        <meta name="keywords" content="大气,黑色,常用,后台管理,网站模板" /> 
+        <meta name="description" content="大气黑色常用后台管理网站模板下载，框架已搭好，自定义填充模板类型。" /> 
 		<link rel="stylesheet" type="text/css" href="/css/identify.css" />
 		<link rel="stylesheet" type="text/css" href="/css/layout.css" />
 		<link rel="stylesheet" type="text/css" href="/css/account.css" />
@@ -13,12 +15,9 @@
 		<script type="text/javascript" src="/js/haidao.offcial.general.js"></script>
 		<script type="text/javascript" src="/js/select.js"></script>
 		<script type="text/javascript" src="/js/haidao.validate.js"></script>
-		<link href="/css/bootstrap.min.css" rel="stylesheet">
-		<!--    <link th:href="@{/static/bootstrap/bootstrap/css/bootstrap.min.css}">-->
-		<link href="/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
-		<link href="/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+
 		<style>
-			.Content-Main h2{
+			.Content-Main h1{
 				display: block;
 				padding: 0px 0px 10px 40px;
 				margin: -10px -30px 30px -30px;
@@ -30,39 +29,38 @@
 	</head>
 
 	<body>
-
-<div class="view-topbar">
-	<div class="topbar-console">
-		<div class="tobar-head fl">
-			<a href="#" class="topbar-logo fl">
-				<span><img src="/Images/logo.png" width="20" height="20"/></span>
-			</a>
-			<a href="index.html" class="topbar-home-link topbar-btn text-center fl"><span>壹信餐饮</span></a>
-		</div>
-	</div>
-	<div class="topbar-info">
-		<ul class="fr">
-<!--			<li class="fl dropdown topbar-notice topbar-btn">-->
-<!--				<a href="#" class="dropdown-toggle">-->
+		<div class="view-topbar">
+			<div class="topbar-console">
+				<div class="tobar-head fl">
+					<a href="#" class="topbar-logo fl">
+					<span><img src="/Images/logo.png" width="20" height="20"/></span>
+					</a>
+					<a href="index.html" class="topbar-home-link topbar-btn text-center fl"><span>壹信餐饮</span></a>
+				</div>
+			</div>
+			<div class="topbar-info">
+				<ul class="fr">
+<!--					<li class="fl dropdown topbar-notice topbar-btn">-->
+<!--					<a href="#" class="dropdown-toggle">-->
 <!--					<span class="icon-notice"></span>-->
 <!--					<span class="topbar-num have">0</span>-->
 <!--					&lt;!&ndash;have表示有消息，没有消息去掉have&ndash;&gt;-->
-<!--				</a>-->
-<!--			</li>-->
-			<li class="fl topbar-info-item">
-				<div class="dropdown" id="mydrop" onclick="c()">
-					<a href="#" class="topbar-btn">
-						<span class="fl text-normal" id="myname">小朱</span>
+<!--					</a>-->
+<!--					</li>-->
+					<li class="fl topbar-info-item">
+					<div class="dropdown">
+						<a href="#" class="topbar-btn">
+							<span class="fl text-normal" id="myname">小朱</span>
 						<span class="icon-arrow-down"></span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="../login.html">退出</a></li>
-					</ul>
-				</div>
-			</li>
-		</ul>
-	</div>
-</div>
+						</a>
+						<ul class="dropdown-menu">
+							<li><a href="../login.html">退出</a></li>
+						</ul>
+					</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 		<div class="view-body">
 			<div class="view-sidebar">
 				<div class="sidebar-content">
@@ -105,7 +103,7 @@
 					</div>
 					<div class="sidebar-nav">
 						<div class="sidebar-title">
-							<a href="../file/talk_mes.html">
+							<a href="../file/money.html">
 								<span class="icon"><b class="fl icon-been-set"></b></span>
 								<span class="text-normal">评价信息</span>
 							</a>
@@ -114,7 +112,7 @@
 					</div>
 					<div class="sidebar-nav">
 						<div class="sidebar-title">
-							<a href="../file/money.html">
+							<a href="#">
 								<span class="icon"><b class="fl icon-been-set"></b></span>
 								<span class="text-normal">MONEY</span>
 							</a>
@@ -135,64 +133,49 @@
 			<div class="view-product background-color">
 				<div class="padding-big background-color">
 					<div class="account-info clearfix">
-<!--						<div class="ibox-title">-->
-<!--							<h3 >账号管理</h3>-->
-<!--						</div>-->
-						<div class="Content-Main1 page-header" style="border-bottom: 1px solid black;">
-							<h2>账号管理</h2>
+						<div class="Content-Main1">
+							<h1 style="margin-left: 500px" >至今总获利润</h1>
+							<h2 id="givememoney" style="margin-left: 500px"></h2>
 						</div>
-
-						<div id="toolbar">
-							<button id="button" class="btn btn-default">销号</button>
-						</div>
-
-						<table id="table"
-							   data-height="350"
-							   class="table table-striped"
-							   data-toggle="table"
-							   data-show-columns="true"
-							   data-buttons-class="primary"
-							   data-events="operateEvents"
-							   data-toolbar="#toolbar"
-							   data-pagination="true"
-						>
-						</table>
-
-					</div>
 				</div>
 			</div>
 		</div>
+		</div>
 
-
+		<script>
+			$(".sidebar-title").live('click', function() {
+				if ($(this).parent(".sidebar-nav").hasClass("sidebar-nav-fold")) {
+					$(this).next().slideDown(200);
+					$(this).parent(".sidebar-nav").removeClass("sidebar-nav-fold");
+				} else {
+					$(this).next().slideUp(200);
+					$(this).parent(".sidebar-nav").addClass("sidebar-nav-fold");
+				}
+			});
+		</script>
 	</body>
 
 </html>
 <script src="/js/jquery.min.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/plugins/sweetalert/sweetalert.min.js"></script>
-<script src="https://unpkg.com/bootstrap-table@1.21.0/dist/bootstrap-table.min.js"></script>
-<script src="/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
-<script src="/myjs/work/account_get.js"></script>
 <script src="/myjs/isEmpty.js"></script>
 <script src="/myjs/work/work_name.js"></script>
-
 <script>
-	$(".sidebar-title").live('click', function() {
-		if ($(this).parent(".sidebar-nav").hasClass("sidebar-nav-fold")) {
-			$(this).next().slideDown(200);
-			$(this).parent(".sidebar-nav").removeClass("sidebar-nav-fold");
-		} else {
-			$(this).next().slideUp(200);
-			$(this).parent(".sidebar-nav").addClass("sidebar-nav-fold");
-		}
-	});
+$(document).ready(function(){
+	$.ajax({
+		url: "../goods/givememoney",
+		type: "GET",
+		datatype: "json",
+		contentType: "application/json;charset=UTF-8",
 
-	function c() {
-		var oh = $("#mydrop").attr("class")
-		if (oh == "dropdown"){
-			$(".dropdown").attr("class","dropdown open")
-		}else {
-			$(".dropdown").attr("class","dropdown")
+		success: function (msg) {
+			if (msg.code == 20011) {
+				var dat = msg.data + " 元"
+				$("#givememoney").html(dat)
+			}
+		},
+		error: function (msg) {
+			console.log("error")
 		}
-	}
+	})
+})
 </script>

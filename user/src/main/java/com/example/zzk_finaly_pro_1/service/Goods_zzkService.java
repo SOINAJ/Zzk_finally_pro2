@@ -24,7 +24,7 @@ public class Goods_zzkService {
     public Result get_money(String number){
         Integer integer = goods_zzkDaol.get_money(number);
         goods_zzkDaol.updata_mes(number);
-        return Result.Save_ativition(integer);
+        return Result.Get_ativition(integer);
     }
 
     public Result insert_newGoods(String data){

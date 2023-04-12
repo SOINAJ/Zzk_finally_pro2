@@ -25,4 +25,7 @@ public interface GoodsDao {
 
     @Update("update goods_zzk set state = 1 where id in ( ${param1})")
     public Integer finsh_goods(String data);
+
+    @Select("select sum(foodmes_zzk.money) from goods_zzk inner join foodmes_zzk")
+    public Integer get_All_money();
 }

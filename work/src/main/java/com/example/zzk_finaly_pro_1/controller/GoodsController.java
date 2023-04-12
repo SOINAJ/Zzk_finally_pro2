@@ -13,6 +13,11 @@ public class GoodsController {
     @Autowired
     private GoodsService goodsService;
 
+    @GetMapping("/givememoney")
+    public Result getAllMoney(){
+       return goodsService.getAll_money();
+    }
+
     @GetMapping
     public Bootstrap getAllGoods(String offset,String limit){
         return goodsService.getAll_goods(offset, limit);

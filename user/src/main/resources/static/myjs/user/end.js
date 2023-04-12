@@ -1,3 +1,4 @@
+
 function endfun(){
     /*swal({
         title: "结账发送",
@@ -13,7 +14,36 @@ function endfun(){
         datatype:"json",
         success:function(data){
             console.log(data)
-            tess += data.data + " 元,需要打包盒吗"
+            if(data.code == 20011){
+
+                tess += data.data + " 元,需要打包盒吗"
+                swal({
+                    title: "结账发送",
+                    text: "请稍后,服务人员正在过来帮您结账",
+                    type: "info",
+                    showCancelButton: true,
+                    confirmButtonColor: "#faebcc",
+                    confirmButtonText: "确定结账",
+                    closeOnConfirm: false
+                }, function () {
+                    // swal("已确定结账！", "工作人员正在过来给你打包。", "success");
+
+                    swal({
+                        title: "已确定结账",
+                        text: tess,
+                        type: "info",
+                        showCancelButton: true,
+                        confirmButtonColor: "#2a94de",
+                        confirmButtonText: "确定结账",
+                        closeOnConfirm: false
+                    }, function () {
+                        swal("已确定结账！", "工作人员正在过来给你打包。", "success");
+                        // $(data).remove()
+                    })
+                    // $(data).remove()
+                })
+            }
+
         },
         error:function (data){
             console.log(data)
@@ -21,30 +51,10 @@ function endfun(){
     })
     // console.log(tess+" !! ")
 
-    swal({
-        title: "结账发送",
-        text: "请稍后,服务人员正在过来帮您结账",
-        type: "info",
-        showCancelButton: true,
-        confirmButtonColor: "#faebcc",
-        confirmButtonText: "确定结账",
-        closeOnConfirm: false
-    }, function () {
-        // swal("已确定结账！", "工作人员正在过来给你打包。", "success");
 
-        swal({
-            title: "已确定结账",
-            text: tess,
-            type: "info",
-            showCancelButton: true,
-            confirmButtonColor: "#2a94de",
-            confirmButtonText: "确定结账",
-            closeOnConfirm: false
-        }, function () {
-            swal("已确定结账！", "工作人员正在过来给你打包。", "success");
-            // $(data).remove()
-        })
-        // $(data).remove()
-    })
+
+}
+
+function give_me_money(){
 
 }

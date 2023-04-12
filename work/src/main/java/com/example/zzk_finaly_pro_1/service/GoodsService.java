@@ -19,6 +19,12 @@ public class GoodsService {
     @Autowired
     private FoodmesDao foodmesDao;
 
+
+    public Result getAll_money(){
+        Integer in = goodsDao.get_All_money();
+        return Result.Get_ativition(in);
+    }
+
     public Bootstrap getAll_goods(String offset,String limit){
         List<Goods_zzk> list = null;
         if (offset != null && limit != null){
